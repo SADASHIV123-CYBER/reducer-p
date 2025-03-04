@@ -1,11 +1,10 @@
-import Counter from "./comp/comp";
+import Counter from "./components/Counter";
+import { CounterProvider } from "./context/CounterContext";
 
-function App() {
-  return (
-    <>
-      <Counter />
-    </>
-  );
-}
+const App = () => (
+  <CounterProvider>
+    <Counter />
+  </CounterProvider>
+);
 
 export default App;
